@@ -3,23 +3,25 @@ function generateMarkdown(data) {
   return `# ${data.title}
     # ${data.description}
     # Table of Contents
-    *[Installation](#installation) 
-    Usage
-    # License
-    # Contributing
-    # Tests
-    # Questions
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Lincense](#lincense) 
+    * [Contributing](#contributing)
+    * [Test](#test)
+    * [Questions](#questions)  
     Badges
     # Installation Instructions
     ${data.install}
     # Usage
     ${data.usage}
+    # Lincense
+    ${data.lincense}
     # Contrubutors
     ${data.contrubution}
     # Test
     ${data.test}
     # Questions
-    If you have any questions, please contact ${data.email}.
+    If you have any questions, please contact ${data.email} or visit https://github.com/${data.username}
 
 
 `;
