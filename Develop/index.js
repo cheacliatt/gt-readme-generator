@@ -38,8 +38,31 @@ const questions = [
     type: "list",
     message: "What is your preferred license of this project?",
     name: "license",
-    choices: ["MIT License", "Apache License 2.0", "GNU General Public License", "Mozilla Public License 2.0"],
+
+    choices: [
+      {
+        name: "MIT Lincense",
+        value: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+      },
+      {
+        name: "Apache License 2.0",
+        value: "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+      },
+      {
+        name: "GNU General Public License",
+        value: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+      },
+      {
+        name: "Mozilla Public License 2.0",
+        value: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
+      },
+      
+    ]
   },
+
+  // "MIT License", "Apache License 2.0", "GNU General Public License", "Mozilla Public License 2.0"],
+
+
   {
     type: "input",
     message: "What is your email?",
@@ -60,7 +83,7 @@ const questions = [
 function init() {
   inquirer.prompt(questions).then((data) => {
     fs.writeFile(
-      "testREADME.md",
+      "./sampleReadmes/testREADME.md",
       generateMarkdown(data),
       function (err) {
         if (err) {
@@ -71,7 +94,7 @@ function init() {
       }
     );
   });
-}
+};
 
 // function call to initialize program
 init();
