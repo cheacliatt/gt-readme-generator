@@ -1,8 +1,9 @@
+// These are the dependencies for NODE JS for the generator to run.
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// array of questions for user
+// Array of questions for user.
 const questions = [
   {
     type: "input",
@@ -38,7 +39,6 @@ const questions = [
     type: "list",
     message: "What is your preferred license of this project?",
     name: "license",
-
     choices: [
       {
         name: "MIT Lincense",
@@ -52,13 +52,8 @@ const questions = [
       {
         name: "Mozilla Public License 2.0",
       },
-      
-    ]
+    ],
   },
-
-  // "MIT License", "Apache License 2.0", "GNU General Public License", "Mozilla Public License 2.0"],
-
-
   {
     type: "input",
     message: "What is your email?",
@@ -71,26 +66,20 @@ const questions = [
   },
 ];
 
-// function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, data, "utf-8");
-// }
-// function to initialize program
+// This is the function that using the generateMarkdown and the user's questions to generate the complete README.
 function init() {
   inquirer.prompt(questions).then((data) => {
-    fs.writeFile(
-      "./outputReadme/README.md",
-      generateMarkdown(data),
-      function (err) {
-        if (err) {
-          return console.log(err);
-        }
-
-        console.log("Success!");
+    fs.writeFile("./outputReadme/README.md", generateMarkdown(data), function (
+      err
+    ) {
+      if (err) {
+        return console.log(err);
       }
-    );
+
+      console.log("Success!");
+    });
   });
-};
+}
 
 // function call to initialize program
 init();

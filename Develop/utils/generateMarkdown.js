@@ -1,6 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+<img src="https://img.shields.io/badge/license-${data.license}-red"/>
   
 ## Table of Contents
 * [Description](#description)
@@ -35,5 +36,4 @@ If you have any questions, please contact ${data.email} or visit https://github.
 }
 
 module.exports = generateMarkdown;
-
-// Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+// This allows us to export the generateMarkdown.js into the index.js

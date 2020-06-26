@@ -1,4 +1,5 @@
 # My First Project
+<img src="https://img.shields.io/badge/license-MIT Lincense-red"/>
   
 ## Table of Contents
 * [Description](#description)
@@ -13,19 +14,19 @@
 It is my very first project.
 
 ## Installation Instructions
-Install it by forking and then cloning from GitHub.
+Fork and clone this project, then open it within terminal.
 
 ## Usage
-It is used primarily for showing off my first project.
+This code is mainly used for showing off my first project.
 
 ## License
 This project is being licensed under the MIT Lincense license.
 
 ## Contributing
-If you wish to contribute, please contact me.
+To contribute to My First Project, please contact me by email.
 
 ## Test
-Test this code by using NODE JS.
+This code can be tested by executing it with NODE JS.
 
 ## Questions
 If you have any questions, please contact cheacliatt@gmail.com or visit https://github.com/cheacliatt
