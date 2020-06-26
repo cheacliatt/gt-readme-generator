@@ -38,7 +38,7 @@ const questions = [
     type: "list",
     message: "What is your preferred license of this project?",
     name: "license",
-    choices: ["this", "that", "whatever"],
+    choices: ["MIT License", "Apache License 2.0", "GNU General Public License", "Mozilla Public License 2.0"],
   },
   {
     type: "input",
